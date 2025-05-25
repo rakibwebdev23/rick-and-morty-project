@@ -2,10 +2,9 @@ import { useQuery } from "@tanstack/react-query";
 import useAxiosRick from "./useAxiosRick";
 
 const useLocations = () => {
-
     const axiosRick = useAxiosRick();
 
-    const { data: locations = [] } = useQuery({
+    const { data = {} } = useQuery({
         queryKey: ["locations"],
         queryFn: async () => {
             const res = await axiosRick.get("/location");
@@ -13,7 +12,7 @@ const useLocations = () => {
         }
     })
 
-    return [locations];
+    return { locations: data.results || [] };
 };
 
 export default useLocations;
