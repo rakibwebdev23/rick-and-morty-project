@@ -2,9 +2,9 @@ const CharacterCard = ({ character }) => {
     const { name, image } = character;
 
     return (
-        <div className="bg-white shadow-md rounded-xl overflow-hidden text-center">
-            <img src={image} alt={name} className="w-full h-60 object-cover rounded-md mb-4" />
-            <h3 className="text-xl font-semibold">{name}</h3>
+        <div className="shadow-md rounded-xl overflow-hidden text-center p-3 border border-[#9df618]"> 
+            <img src={image} alt={name} className="w-full h-48 object-cover rounded mb-4" />
+            <h3 className="font-semibold text-white">{name}</h3>
         </div>
     );
 };

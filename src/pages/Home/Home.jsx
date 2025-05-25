@@ -6,7 +6,7 @@ import bgImage from "../../assets/images/Spiral Element.png"
 
 const Home = () => {
     return (
-        <div className="bg-slate-950 bg-opacity-90">
+        <div className="bg-slate-950 bg-opacity-90 pb-10">
             <Banner></Banner>
             <Characters></Characters>
             <div style={{ backgroundImage: `url(${bgImage})` }}>
