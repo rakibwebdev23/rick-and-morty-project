@@ -25,7 +25,7 @@ const Episodes = () => {
 
     return (
         <Container>
-            <div className="pt-10">
+            <div className="pt-14">
                 <h2 className="text-white text-2xl font-bold mb-4">Episodes</h2>
                 <div className="relative">
                     <Swiper

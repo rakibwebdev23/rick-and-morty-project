@@ -26,7 +26,7 @@ const Characters = () => {
 
     return (
         <Container>
-            <div className="mt-10">
+            <div className="mt-14">
                 <div className="flex justify-between items-center mb-6">
                     <h2 className="text-2xl text-white font-semibold">Meet The Cast</h2>
                     <button className="btn btn-primary">View All</button>

@@ -27,26 +27,24 @@ const Banner = () => {
                             </div>
                             <span className="text-4xl md:text-8xl font-bold uppercase">
                                 <span className="bg-gradient-to-r from-[#9df618] to-[#6df3c4] bg-clip-text text-transparent">
-                                    Morty 
+                                    Morty
                                 </span>
                                 <span className="text-white italic"> Wiki</span>
                             </span>
                         </div>
 
                         <div className="flex flex-col md:flex-row md:items-center md:justify-center gap-6">
-                            <Link to="/">
+                            <Link to="https://www.youtube.com/watch?v=KQ9Cgdsa9tc&feature=youtu.be" target="_blank">
                                 <button className="flex items-center gap-2 bg-gradient-to-r from-[#ADFF2F] to-[#00FFA4]
                                  text-white font-semibold px-6 py-2 rounded-full hover:scale-105 transition duration-300">
                                     <FaPlay />
                                     Watch Now
                                 </button>
                             </Link>
-
                             <p className="text-sm text-[#a1b5c9] max-w-sm text-left">
                                 Brilliant but boozy scientist Rick hijacks his fretful teenage grandson, Morty, for wild escapades in other worlds and alternate dimensions.
                             </p>
                         </div>
-
                     </div>
                 </div>
             </Container>
