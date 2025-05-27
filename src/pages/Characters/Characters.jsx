@@ -1,10 +1,11 @@
 import { useState, useRef, useEffect } from "react";
-import Container from "../../components/shared/Cotainer/Container";
-import useCharacters from "../../hooks/useCharacters";
-import CharacterCard from "./CharacterCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
+import { Link } from "react-router-dom";
+import CharacterCard from "../../components/shared/CharacterCard/CharacterCard";
+import Container from "../../components/shared/Cotainer/Container";
+import useCharacters from "../../hooks/useCharacters";
 
 const Characters = () => {
     const { characters } = useCharacters();
@@ -29,7 +30,7 @@ const Characters = () => {
             <div className="mt-14">
                 <div className="flex justify-between items-center mb-6">
                     <h2 className="text-2xl text-white font-semibold">Meet The Cast</h2>
-                    <button className="btn btn-primary">View All</button>
+                    <Link to="/viewAllCharacter"><button className="btn btn-primary">View All</button></Link>
                 </div>
                 <div className="relative">
                     <Swiper

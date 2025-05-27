@@ -11,7 +11,7 @@ const Banner = () => {
             className="hero min-h-screen"
             style={{ backgroundImage: `url(${bgImage})` }}
         >
-            <div className="hero-overlay bg-slate-950 bg-opacity-90"></div>
+            <div className="hero-overlay bg-slate-950 bg-opacity-80"></div>
 
             <Container>
                 <div className="hero-content text-neutral-content w-full">

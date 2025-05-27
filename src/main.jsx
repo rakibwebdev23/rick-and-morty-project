@@ -9,7 +9,7 @@ const queryClient = new QueryClient();
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <div className='min-h-screen w-full'>
+      <div className='min-h-screen w-full bg-slate-950'>
         <RouterProvider router={router} />
       </div>
     </QueryClientProvider>
