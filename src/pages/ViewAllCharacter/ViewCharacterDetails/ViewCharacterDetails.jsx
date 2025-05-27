@@ -23,48 +23,58 @@ const ViewCharacterDetails = () => {
     }, [episode]);
 
     return (
-        <div className="bg-[#0D1117] min-h-screen py-10">
+        <div className="min-h-screen pt-40 pb-10 text-white">
             <Container>
-                <div className="bg-[#161B22] text-white p-6 rounded-xl shadow-lg grid grid-cols-1 md:grid-cols-2 gap-10">
-                    {/* Left: Image + Name */}
-                    <div className="flex flex-col items-center text-center">
-                        <img src={image} alt={name} className="rounded-xl w-56 h-56 object-cover mb-4 border-4 border-[#30363D]" />
-                        <h1 className="text-3xl font-bold text-cyan-400">{name}</h1>
-                    </div>
-
-                    {/* Right: Info Cards */}
-                    <div className="space-y-4">
-                        <div className="grid grid-cols-2 gap-4 text-sm sm:text-base">
-                            <div className="bg-[#21262D] p-4 rounded-lg border border-[#30363D]">
-                                <p className="text-gray-400">Status</p>
-                                <p className="text-white font-semibold">{status}</p>
-                            </div>
-                            <div className="bg-[#21262D] p-4 rounded-lg border border-[#30363D]">
-                                <p className="text-gray-400">Species</p>
-                                <p className="text-white font-semibold">{species}</p>
-                            </div>
-                            <div className="bg-[#21262D] p-4 rounded-lg border border-[#30363D]">
-                                <p className="text-gray-400">Gender</p>
-                                <p className="text-white font-semibold">{gender}</p>
-                            </div>
-                            <div className="bg-[#21262D] p-4 rounded-lg border border-[#30363D]">
-                                <p className="text-gray-400">Origin</p>
-                                <p className="text-white font-semibold">{origin.name}</p>
-                            </div>
-                            <div className="bg-[#21262D] p-4 rounded-lg border border-[#30363D] col-span-2">
-                                <p className="text-gray-400">Last Known Location</p>
-                                <p className="text-white font-semibold">{location.name}</p>
+                <div className="flex flex-col md:flex-row items-center gap-6">
+                    <div className="md:w-1/2 w-full flex flex-col items-center">
+                        <h1 className="text-4xl font-semibold text-cyan-400 mb-4 text-center">{name}</h1>
+                        <div className="p-[1px] rounded-md bg-gradient-to-br from-[#00c681] to-[#79f9cc] inline-block">
+                            <div className="bg-[#0D1117] rounded-md p-8">
+                                <img src={image} alt={name} className="rounded-md w-56 h-56 object-cover" />
                             </div>
                         </div>
+                    </div>
+                    <div className="hidden md:block w-[2px] h-64 bg-gradient-to-b from-[#00c681] to-[#79f9cc] mx-6"></div>
+                    <div className="md:w-1/2 w-full space-y-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm sm:text-base">
+                            {[{ label: "Status", value: status },
+                            { label: "Species", value: species },
+                            { label: "Gender", value: gender }].map((item, index) => (
+                                <div
+                                    key={index}
+                                    className="p-[1px] rounded-md bg-gradient-to-br from-[#00c681] to-[#79f9cc]"
+                                >
+                                    <div className="bg-[#0D1117] rounded-md p-4 h-full">
+                                        <p className="text-gray-400">{item.label}</p>
+                                        <p className="font-semibold text-white">{item.value}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="space-y-4">
+                            {[{ label: "Origin", value: origin.name },
+                            { label: "Last Known Location", value: location.name }].map((item, index) => (
+                                <div
+                                    key={index}
+                                    className="p-[1px] rounded-md bg-gradient-to-br from-[#00c681] to-[#79f9cc]"
+                                >
+                                    <div className="bg-[#0D1117] rounded-md p-4">
+                                        <p className="text-gray-400">{item.label}</p>
+                                        <p className="font-semibold text-white">{item.value}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
 
-                        {/* Episodes */}
-                        <div className="bg-[#21262D] p-4 rounded-lg border border-[#30363D]">
-                            <p className="text-cyan-400 text-lg font-semibold mb-2">Episode(s)</p>
-                            <ul className="max-h-40 overflow-y-auto custom-scrollbar space-y-1 text-sm">
-                                {episodeNames.map((ep, index) => (
-                                    <li key={index} className="text-white list-disc list-inside">{ep}</li>
-                                ))}
-                            </ul>
+                        <div className="p-[1px] rounded-md bg-gradient-to-br from-[#00c681] to-[#79f9cc]">
+                            <div className="bg-[#0D1117] rounded-md p-4 max-h-40 overflow-y-auto custom-scrollbar">
+                                <p className="text-gray-300 text-md mb-2">Episode(s)</p>
+                                <ul className="space-y-1 text-sm list-disc list-inside">
+                                    {episodeNames.map((ep, index) => (
+                                        <li key={index} className="text-white font-medium lg:text-2xl">{ep}</li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
