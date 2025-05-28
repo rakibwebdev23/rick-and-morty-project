@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './characterCard.css';
+import './CharacterCard.css';
 
 const CharacterCard = ({ character }) => {
   const {id, name, image } = character;
