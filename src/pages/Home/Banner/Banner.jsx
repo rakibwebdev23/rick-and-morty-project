@@ -15,16 +15,16 @@ const Banner = () => {
             <Container>
                 <div className="hero-content text-neutral-content w-full">
                     <div className="flex flex-col gap-10 text-left md:text-center w-full">
-                        <div>
-                            <div className="text-4xl md:text-8xl font-bold flex flex-wrap items-center md:justify-center gap-3 leading-relaxed">
+                        <div className="pt-8 lg:pt-6">
+                            <div className="text-3xl md:text-8xl font-bold flex flex-wrap items-center md:justify-center gap-3 leading-relaxed">
                                 <img className="w-12 md:w-36" src={bubble} alt="bubble" />
                                 <span className="text-white italic flex items-center">
                                     THE
                                 </span>
-                                <img className="w-10 md:w-36" src={portal} alt="portal" />
+                                <img className="w-12 md:w-36" src={portal} alt="portal" />
                                 <span className="bg-gradient-to-r from-[#06dc91] to-[#a9ffe1] bg-clip-text text-transparent">RICK &</span>
                             </div>
-                            <span className="text-4xl md:text-8xl font-bold uppercase">
+                            <span className="text-3xl md:text-8xl font-bold uppercase">
                                 <span className="bg-gradient-to-r from-[#9df618] to-[#6df3c4] bg-clip-text text-transparent">
                                     Morty
                                 </span>
