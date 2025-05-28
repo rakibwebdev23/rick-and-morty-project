@@ -27,10 +27,14 @@ const Characters = () => {
 
     return (
         <Container>
-            <div className="mt-14">
+            <div className="lg:mt-14 mt-6">
                 <div className="flex justify-between items-center mb-6">
                     <h2 className="text-2xl text-white font-semibold">Meet The Cast</h2>
-                    <Link to="/viewAllCharacter"><button className="btn btn-primary">View All</button></Link>
+                    <Link to="/viewAllCharacter">
+                        <button className="text-gray-300 py-2 text-sm px-5 border border-[#7cff2b] rounded-md">
+                            View All
+                        </button>
+                    </Link>
                 </div>
                 <div className="relative">
                     <Swiper

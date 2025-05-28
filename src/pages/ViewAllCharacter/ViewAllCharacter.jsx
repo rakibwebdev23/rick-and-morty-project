@@ -8,7 +8,7 @@ const ViewAllCharacter = () => {
     return (
         <Container>
             <div className="pt-32 pb-20">
-                <h2 className="text-2xl text-white font-semibold mb-4">The Cast</h2>
+                <h2 className="text-2xl lg:text-5xl lg:py-4 text-cyan-400 font-semibold mb-4">The Cast</h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                     {characters.map((character) => (
                         <CharacterCard key={character.id} character={character} />

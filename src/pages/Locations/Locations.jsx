@@ -38,7 +38,7 @@ const Locations = () => {
                         spaceBetween={20}
                         slidesPerView={4.5}
                         breakpoints={{
-                            320: { slidesPerView: 2.5 },
+                            320: { slidesPerView: 2 },
                             640: { slidesPerView: 3.2 },
                             1024: { slidesPerView: 4.5 },
                         }}

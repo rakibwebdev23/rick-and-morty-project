@@ -25,7 +25,7 @@ const Episodes = () => {
 
     return (
         <Container>
-            <div className="pt-14">
+            <div className="lg:pt-14 pt-7">
                 <h2 className="text-white text-2xl font-bold mb-4">Episodes</h2>
                 <div className="relative">
                     <Swiper
@@ -38,7 +38,7 @@ const Episodes = () => {
                         spaceBetween={20}
                         slidesPerView={4.5}
                         breakpoints={{
-                            320: { slidesPerView: 2.5 },
+                            320: { slidesPerView: 2 },
                             640: { slidesPerView: 3.2 },
                             1024: { slidesPerView: 4.5 },
                         }}
